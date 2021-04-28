@@ -5,15 +5,19 @@
     font-family: "Roboto", sans-serif;
 }
 
-body{
+
+.content{
+  width: 100%;
+  height: 100vh;
   background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* For desktop: */
-.content {
-  max-width: 768px;
-  height: 100hv;
-  margin: auto;
+.wrap {
+  width: 768px;
   background-color: white;
   display:flex;
   flex-direction: row;
@@ -23,42 +27,59 @@ body{
 
 @media only screen and (max-width: 640px) {
   /* For mobile phones: */
-  .content {
-    max-width: 320px;
+  .wrap {
+    width: 320px;
     flex-direction: column;
+    align-self:flex-start;
   }
 }
 
 picture{
   max-width: 384px;
+  flex: 1;
 }
 
 .form-wrap {
   max-width: 384px;
   display:flex;
+  flex: 1;
   flex-direction: column;
   padding: 10px;
 }
 
-.form-head{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.item{
-  width: 100%;
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 20px;
 }
 
-.item+.item{
-  margin-top: 20px;
+.grid-item1{
+  grid-row: 1;
 }
 
-.signup{
-  width: 100%;
+a{
+  text-decoration: none;
+  color: blue;
+}
+
+.grid-item2{
+  color: gray;
+  grid-row: 2;
+}
+
+.grid-item3{
+  grid-row: 3;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
+}
+
+.grid-item3 button img{
+  height: 20px;
+}
+
+.grid-item4{
+  color: gray;
+  grid-row: 4;
+  text-align: center;
 }
 
 button[id="google"] {
@@ -97,13 +118,7 @@ button[id="fb"], button[id="apple"] {
   margin-left: 20px;
 }
 
-.signup button img{
-  height: 20px;
-}
 
-.form-head > .item:last-of-type{
-text-align: center;
-}
 
 form{
   width: 100%;
@@ -111,35 +126,64 @@ form{
     flex-direction:column;
   }
 
+  .form-item{
+    color: gray;
+    width: 100%;
+    margin-top: 20px;
+  }
+
   input[id="name"], input[id="email"], input[id="password"], button[id="create"] {
     width: 100%;
+    border-color: lightgray;
+    border-top: none;
+    border-left: none;
+    border-right: none;
   }
 
   input[id="agree"]{
     margin-right: 10px;
   }
 
-  form .item:nth-of-type(4) div{
+  .form-item:nth-of-type(3) div{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+
+  }  
+  
+  .form-item:nth-of-type(3) div span:first-of-type{
+    width: calc(100% - 20px);
+  }
+
+  .form-item:nth-of-type(3) div span:last-of-type{
+    width: 20px;
+  }
+  .form-item:nth-of-type(4){
+    color:black;
+  }
+
+  .form-item:nth-of-type(4) div{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  form .item:nth-of-type(4) div span{
+  .form-item:nth-of-type(4) div span{
     height: 4px;
     width: 20%;
     background-color: green;
     border-radius: 2px;
   }
 
-  form .item:nth-of-type(4) div span:last-of-type{
+  .form-item:nth-of-type(4) div span:last-of-type{
     background-color: lightgray;
   }
 
-  form .item:nth-of-type(5){
+  .form-item:nth-of-type(5){
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    font-size: smaller;
   }
 
   button[id="create"]{
@@ -148,4 +192,5 @@ form{
     color: white;
     padding: 10px;
     border-radius: 5px;
+    border: none;
   }
