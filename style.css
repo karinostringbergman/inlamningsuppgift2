@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+  background-color: lightgray;
+}
+
+/* For desktop: */
+.content {
+  max-width: 768px;
+  height: 100hv;
+  margin: auto;
+  background-color: white;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 640px) {
+  /* For mobile phones: */
+  .content {
+    max-width: 320px;
+    flex-direction: column;
+  }
+}
+
+picture{
+  max-width: 384px;
+}
+
+.form-wrap {
+  max-width: 384px;
+  display:flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.form-head{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.item{
+  width: 100%;
+}
+
+.item+.item{
+  margin-top: 20px;
+}
+
+.signup{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button[id="google"] {
+  width: calc(100% - 120px);
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-color: lightgray;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button[id="google"] div:first-of-type{
+  width: 40px;
+  justify-content: start;
+  align-items: center;
+}
+
+button[id="google"] div:last-of-type {
+  width: calc(100% - 40px);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button[id="fb"], button[id="apple"] {
+  width: 40px;
+  height: 40px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.signup button img{
+  height: 20px;
+}
+
+.form-head > .item:last-of-type{
+text-align: center;
+}
+
+form{
+  width: 100%;
+    display: flex;
+    flex-direction:column;
+  }
+
+  input[id="name"], input[id="email"], input[id="password"], button[id="create"] {
+    width: 100%;
+  }
+
+  input[id="agree"]{
+    margin-right: 10px;
+  }
+
+  form .item:nth-of-type(4) div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  form .item:nth-of-type(4) div span{
+    height: 4px;
+    width: 20%;
+    background-color: green;
+    border-radius: 2px;
+  }
+
+  form .item:nth-of-type(4) div span:last-of-type{
+    background-color: lightgray;
+  }
+
+  form .item:nth-of-type(5){
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  button[id="create"]{
+    height: 40px;
+    background-color: #b43d50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }

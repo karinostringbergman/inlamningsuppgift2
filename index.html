@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/CSS" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&amp;display=swap" rel="stylesheet">
+    <title>Inlämningsuppgift 2</title>
+</head>
+<body>
+    <div class="content"> 
+        <picture>
+            <source srcset="imgphone.svg" media="only screen and (max-width: 640px)">
+            <source srcset="imgdesktop.svg">
+            <img src="imgdesktop.svg" alt="picture" style="width: 320px;">
+        </picture>       
+        <div class="form-wrap">
+            <div class="form-head">
+                <div class="item">
+                    <h2>Sign up to Asgard</h2>
+                </div>
+                <div class="item">
+                    Already have an account? <a href="https://www.google.com/">Log in</a>
+                </div>
+                <div class="item">
+                    <div class="signup">
+                        <button id="google" type="button">
+                            <div><img src="google.svg"></div>
+                            <div>Sign up with Google</div>
+                        </button> 
+                        <button id="fb" type="button"><img src="facebook.svg"></button> 
+                        <button id="apple" type="button"><img src="apple.svg"></button>
+                    </div>
+                </div>
+                <div class="item">
+                    <p>- OR -</p>
+                </div>
+            </div>
+            <form action="/action_page.php">
+                <div class="item">
+                    <p>Full name</p>
+                    <input type="text" id="name" name="name" placeholder="Tylor Durden">
+                </div>
+                <div class="item">
+                    <p>Email address</p>
+                    <input type="text" id="email" name="email" placeholder="tylor@durden.design">
+                </div>
+                <div class="item">
+                    <p>Password</p>
+                    <input type="text" id="password" name="password" placeholder="● ● ● ● ● ●">
+                </div>
+                <div class="item">
+                    <p>Password strength</p>
+                        <div>
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="agree" name="agree" value="Agree">
+                    <p>By creating account, you agree to accept our <a href="https://www.google.com">Privacy Policy</a>, <a href="https://www.google.com">Terms of Service</a> and <a href="https://www.google.com">Notification settings</a></p>
+                </div>
+                <div class="item">
+                    <button id="create" type="button">Create Account</button>
+                </div>
+            </form> 
+        </div>
+    </div>
+</body>
+</html>
